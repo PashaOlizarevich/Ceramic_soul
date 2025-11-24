@@ -1,3 +1,5 @@
+@use "/src/sass/base/variables.scss" as *;
+
 h1,
 h2,
 h3,
@@ -23,6 +25,10 @@ h4,
 h5 {
 	font-size: inherit;
 	font-weight: inherit;
+}
+
+body {
+	background-color: $light;
 }
 
 img {

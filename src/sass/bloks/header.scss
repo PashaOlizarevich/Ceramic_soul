@@ -1,0 +1,40 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	&__logo {
+		width: 100px;
+		height: 100px;
+	}
+	&__icons {
+		display: flex;
+		align-items: start;   /* --- тут я сделал что бы контет занимаел место в ссылке точно столько сколько нам нужно а это 20px */
+		gap: 15px;
+		a {
+			display: block;
+			color: $dark;
+			span {                 /* ----- тут мы мделали наши иконки строго по макету , но не ко всем иконкам такой способ подходит */
+				display: block;
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+
+
+
+.burger {
+	display: flex;
+	height: 23px;
+	flex-direction: column;
+	row-gap: 10px;
+	padding-right: 35px;    /* --- этим отступом я выравнивал расположение логотипо что бы он был по центру */
+	span {
+		display: block;
+		width: 20px;
+		height: 1px;
+		background-color: $dark;  /* ---- ппокрасил блок как бы залили его  */
+	}
+}
