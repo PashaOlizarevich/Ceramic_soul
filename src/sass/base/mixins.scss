@@ -11,6 +11,7 @@
 
 @mixin button {
     display: block;
+    padding: 0 10px;  /* ---сделал для того что бы если поменяется текс , то он не прилипнет к краям кнопки */
     border-radius: 2px;
     background-color: transparent;  /* - сделал кнопку прозрачной */
     border: 1px solid $dark;
@@ -20,4 +21,5 @@
     font-weight: 400px;
     line-height: none;
     text-transform: uppercase;
+    cursor: pointer;  /* --- внешний вид курсора при наведение на кнопку */
 }

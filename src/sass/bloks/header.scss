@@ -1,8 +1,10 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .header {
-	display: flex;
-	justify-content: space-between;
+	&__top {
+		display: flex;
+		justify-content: space-between;	
+	}
 	&__logo {
 		width: 100px;
 		height: 100px;
@@ -21,6 +23,9 @@
 			}
 		}
 	}
+	&__nav {
+		display: none;
+	}
 }
 
 
@@ -36,5 +41,51 @@
 		width: 20px;
 		height: 1px;
 		background-color: $dark;  /* ---- ппокрасил блок как бы залили его  */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		&__nav {
+			display: block;
+			margin-top: 20px;
+			ul {
+				display: flex; /* --- выровнял контент в одну строку */
+				justify-content: center;
+				gap: 30px;
+				padding-left: 0px; /* --- убрал левый отступ он присуствует изначально и не сбрасывается изначально ни чем  */
+				li {
+					list-style-type: none; /* --- убрал декоративный кружок */
+				}
+			}
+		}
+		&__link {
+			color: $dark;
+			font-weight: 400;
+			font-size: 20px;
+			font-style: normal;
+			line-height: none;
+			text-transform: uppercase;		
+			text-decoration: none;
+		}
+	}
+	.burger {
+		visibility: hidden;  /* ---- 'этим свойством я скрыли наш значек бургера , но при этом он не поломал вертску то есть место где он был осталось занятым' */
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.header {
+		&__logo {
+		width: 150px;
+		height: 151px;
+		}
+
+	&__nav {
+		margin-top: 36px;
+		ul {
+			gap: 60px;
+		}
+	}
 	}
 }
