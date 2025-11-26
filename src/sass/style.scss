@@ -1,9 +1,10 @@
 @use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/grids-min.css";
+@use "/src/sass/libs/grids-responsive-min.css";
 @use "/src/sass/libs/fontello.css";
 @use "/src/sass/base/basic.scss";
 
 @use "/src/sass/base/variables.scss" as *;
-@use "/src/sass/pxtorem.scss" as *;
 
 /* Большие помпаненты */
 @use "/src/sass/bloks/header.scss";
@@ -14,4 +15,5 @@
 
 /* секции */
 @use "/src/sass/bloks/promo.scss";
+@use "/src/sass/bloks/activities.scss";
 
