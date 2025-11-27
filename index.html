@@ -72,7 +72,30 @@
 					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
 						<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea">
 					</div>
-					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">	</div>
+					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
+						<form action="#">  <!-- ---создаю форму для заполнения данных -->
+							<fieldset class="touch__fieldset">   <!-- ---набор каки-то полей -->
+								<div class="touch__input-block">
+									<label for="name">Name</label>
+									<input 
+										class="touch__input"
+										type="text" 
+										id="name" 
+										name="name" 
+										placeholder="name"> <!-- --- placeholder отвечает за надпись в поле куда пользователь напишет свой никнейм -->
+								</div>
+								<label for="email">Email</label>
+								<input 
+									class="touch__input"
+									type="email" 
+									id="email" 
+									name="email" 
+									placeholder="email">
+							</fieldset>
+							<label for="question">Your question</label>
+							<textarea name="question" id="question"></textarea>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
