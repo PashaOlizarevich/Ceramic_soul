@@ -8,6 +8,17 @@
     font-size: 20px;
 }
 
+.btn-send {
+    @include button;
+    width: 230px;
+    height: 40px;
+    font-size: 16px;
+    &:focus {
+        outline: 1px solid $Ceramic;
+        border: 1px solid $Ceramic;   /* ---именно в кнопке отставили два значения что бы если отлуйн отвалится тогда будет работать бордер */
+    }
+}
+
 @media screen and (min-width: 1200px) {
 	.btn-default {
 		&:hover {
@@ -21,6 +32,20 @@
             border: none;
         }
 	}
+    .btn-send {
+    &:active {
+        outline: 1px solid $Ceramic;
+        border: 1px solid $Ceramic;
+    }
+    &:hover {
+        color: $Ceramic;
+        border: 1px solid $Ceramic;
+    }
+    &:disabled {
+        color: $ui-disabled;
+        border: 1px solid $ui-disabled;
+    }
+}
 }
 
 @media screen and (min-width: 1920px) {

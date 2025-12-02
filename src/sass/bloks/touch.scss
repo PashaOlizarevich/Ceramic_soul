@@ -19,6 +19,9 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 28px;
+        &:nth-child(2) {   /* ---добавил отступ как в макете если не понятно изучить больше про этот пвсевдо элемент */ 
+            margin-top: 8px;
+        }
     }
     &__input {
         width: 100%;
@@ -31,10 +34,46 @@
             border: none;
             outline: 1px solid $dark;
         }
+        &::placeholder {   /* ---псевдоэлемент сдеали его для того что бы пока в поле ничего не пишем там отоброжается информация , но после того как начинаем в поле писать она исчезает своего родаподсказка где и что писать */
+            color: $ui-active;
+            font-size: 14px;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        height: 132px;
+        padding: 10px 15px;
+        color: $dark;
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        background: #fff;
+        resize: none; /* ---отключил поле что бы нельзя было его двигать в браузере ( если не понятно обьясняю  то закаментить и проверить) */
+        &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
         &::placeholder {
             color: $ui-active;
             font-size: 14px;
         }
+    }
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        a {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 2px; /* ---из-за того что мы поставили блок во флекс блок сылка приклеилась и я дал отступ в 2 пикселя */
+        }
+    }
+    &__checkbox {
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+    }
+    &__btn {
+        margin-top: 20px;
     }
 }
 
