@@ -48,6 +48,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="activities">  <!-- ---создаем эту секцию полность на библиотеке pure -->
 			<div class="container">
 				<h2 class="title-h2">create or buy</h2>
@@ -65,6 +66,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="touch">
 			<div class="container">
 				<h2 class="title-h2">get in touch</h2>
@@ -73,7 +75,7 @@
 						<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea">
 					</div>
 					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
-						<form action="#">  <!-- ---создаю форму для заполнения данных -->
+						<form class="touch__form" action="#">  <!-- ---создаю форму для заполнения данных -->
 							<fieldset class="touch__fieldset">   <!-- ---набор каки-то полей -->
 								<div class="touch__input-block">
 									<label class="touch__label" for="name">Name</label>
@@ -83,16 +85,20 @@
 										id="name" 
 										name="name" 
 										placeholder="Name"
-										required> <!-- --- placeholder отвечает за надпись в поле куда пользователь напишет свой никнейм -->
+										required
+									> <!-- --- placeholder отвечает за надпись в поле куда пользователь напишет свой никнейм -->
 								</div>
-								<label class="touch__label" for="email">Email</label>
+								<div class="touch__input-block">
+									<label class="touch__label" for="email">Email</label>
 								<input 
 									class="touch__input"
 									type="email" 
 									id="email" 
 									name="email" 
 									placeholder="Email"
-									required>
+									required
+								>
+								</div>
 							</fieldset>
 							<label class="touch__label" for="question">Your question</label>
 							<textarea 
@@ -114,8 +120,12 @@
 						</form>
 					</div>
 				</div>
+				<img src="/src/img/form/vase.png" alt="vase" class="touch__decor">
 			</div>
 		</section>
+
+		
+		
 		<script type="module" src="/src/js/script.js"></script>
 	</body>
 </html>
