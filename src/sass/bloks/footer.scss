@@ -1,0 +1,62 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+    height: 814px;
+    background-color: $dark;
+    margin-top: 95px;
+    &__news {
+        padding-top: 50px;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $light;
+    }
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__label {
+        display: block;
+        color: $light;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        &:nth-child(1) {   /* ---добавил отступ как в макете если не понятно изучить больше про этот пвсевдо элемент */ 
+        margin-top: 40px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 48px;
+        padding: 10px 15px;
+        color: $light;
+        margin-top: 40px;
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        &:focus {
+            border: none;
+            outline: 1px solid $light;
+        }
+        &::placeholder {   /* ---псевдоэлемент сдеали его для того что бы пока в поле ничего не пишем там отоброжается информация , но после того как начинаем в поле писать она исчезает своего родаподсказка где и что писать */
+            color: $ui-active;
+            font-size: 14px;
+        }
+    }
+    &__check-block {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        a {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 2px; /* ---из-за того что мы поставили блок во флекс блок сылка приклеилась и я дал отступ в 2 пикселя */
+        }
+    }
+    &__checkbox {
+            margin-right: 15px;
+            width: 15px;
+            height: 15px;
+    }
+}
