@@ -19,6 +19,24 @@
     }
 }
 
+.btn-submit {
+    @include button;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid $light;
+        &:active {
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+            background: rgb(255, 255, 255);
+            color: $dark;
+            border: none;
+        }
+        &:disabled {
+        color: $ui-disabled;
+        border: 1px solid $ui-disabled;
+        }
+    }
+
 @media screen and (min-width: 1200px) {
 	.btn-default {
 		&:hover {
