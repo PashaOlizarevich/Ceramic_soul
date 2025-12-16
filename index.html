@@ -15,18 +15,15 @@
 		/>
 	</head>
 	<body>
-
 		<section class="promo">
-			<img src="/src/img/promo/potter.jpg" alt="potter" class="promo__potter">
+			<img src="/src/img/promo/potter.jpg" alt="potter" class="promo__potter" />
 			<div class="container">
-				<div class="header">
-					<div class="header__top">  <!-- --- я добавил этот блок что бы отдельно обернуть бургер, лого и иконки -->
-						<div class="burger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<a href="#" class="header__logo"><img src="/src/logo/logo.png" alt="logo"></a>       <!-- ----делаем на логотип ссылку что бы при клике перешли на первую страницу --> 
+				<header class="header">
+					<div class="header__top">
+						<div class="burger"><span></span><span></span><span></span></div>
+						<a href="#" class="header__logo"
+							><img src="/src/logo/logo.png" alt="logo"
+						/></a>
 						<div class="header__icons">
 							<a href="#"><span class="icon-search"></span></a>
 							<a href="#"><span class="icon-shopping-bag"></span></a>
@@ -39,30 +36,61 @@
 							<li><a href="#" class="header__link">about</a></li>
 						</ul>
 					</nav>
-				</div>
+				</header>
 				<div class="promo__wrapper">
-					<h1 class="title-h1-italic promo__title">Make your dream come true<br/> or decorate your home</h1>
+					<h1 class="title-h1-italic promo__title">
+						Make your dream come true<br />or decorate your home
+					</h1>
 					<div class="promo__cta">
-						<img src="/src/img/promo/ceramic-vase.jpg" alt="vase" class="promo__img">
+						<img
+							src="/src/img/promo/ceramic-vase.jpg"
+							alt="vase"
+							class="promo__img"
+						/>
 						<button class="btn-default promo__btn">shop now</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="activities">  <!-- ---создаем эту секцию полность на библиотеке pure -->
+		<section class="activities">
 			<div class="container">
 				<h2 class="title-h2">create or buy</h2>
-				<div class="pure-g activities__wrapper">   <!-- ---создал грид сетку с помощью pure -->
+				<div class="pure-g activities__wrapper">
 					<div class="pure-u-1 pure-u-xl-2-5 activities__col">
 						<h3 class="title-h3">our store</h3>
-						<img class="activities__img" src="/src/img/about/store.jpg" alt="store">
-						<p class="activities__text">Welcome to <span class="activities__text_colored">Ceramic Soul</span>, where each piece tells a story of craftsmanship and creativity. Our handmade ceramics are thoughtfully designed and carefully crafted, blending traditional techniques with modern aesthetics. Whether you're looking for a unique gift or a special addition to your home, our collection offers timeless pieces that bring warmth and authenticity to any space.</p>
-					</div>   <!-- ---создал ширину коллонки 100% -->
+						<img
+							src="/src/img/about/store.jpg"
+							alt="store"
+							class="activities__img"
+						/>
+						<p class="activities__text">
+							Welcome to
+							<span class="activities__text_colored">Ceramic Soul</span>, where
+							each piece tells a story of craftsmanship and creativity. Our
+							handmade ceramics are thoughtfully designed and carefully crafted,
+							blending traditional techniques with modern aesthetics. Whether
+							you're looking for a unique gift or a special addition to your
+							home, our collection offers timeless pieces that bring warmth and
+							authenticity to any space.
+						</p>
+					</div>
 					<div class="pure-u-1 pure-u-xl-3-5 activities__col">
 						<h3 class="title-h3">our workshop</h3>
-						<img class="activities__img" src="/src/img/about/ceramic.jpg" alt="ceramic">
-						<p class="activities__text activities__text_fixed">At <span class="activities__text_colored">Ceramic Soul</span> workshop, we don’t just craft ceramics—we invite you to get hands-on and create your own unique pieces. Through our engaging masterclasses, you’ll learn traditional techniques, work with natural materials, and experience the joy of shaping clay into something truly personal.</p>
+						<img
+							src="/src/img/about/ceramic.jpg"
+							alt="ceramic"
+							class="activities__img"
+						/>
+						<p class="activities__text activities__text_fixed">
+							At
+							<span class="activities__text_colored">Ceramic Soul</span>
+							workshop, we don’t just craft ceramics—we invite you to get
+							hands-on and create your own unique pieces. Through our engaging
+							masterclasses, you’ll learn traditional techniques, work with
+							natural materials, and experience the joy of shaping clay into
+							something truly personal.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -73,148 +101,167 @@
 				<h2 class="title-h2">get in touch</h2>
 				<div class="pure-g touch__wrapper">
 					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
-						<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea">
+						<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea" />
 					</div>
-					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
-						<form class="touch__form" action="#">  <!-- ---создаю форму для заполнения данных -->
-							<fieldset class="touch__fieldset">   <!-- ---набор каки-то полей -->
+					<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
+						<form class="touch__form" action="#">
+							<fieldset class="touch__fieldset">
 								<div class="touch__input-block">
 									<label class="touch__label" for="name">Name</label>
-									<input 
+									<input
 										class="touch__input"
-										type="text" 
-										id="name" 
-										name="name" 
+										type="text"
+										id="name"
+										name="name"
 										placeholder="Name"
 										required
-									> <!-- --- placeholder отвечает за надпись в поле куда пользователь напишет свой никнейм -->
+									/>
 								</div>
 								<div class="touch__input-block">
 									<label class="touch__label" for="email">Email</label>
-								<input 
-									class="touch__input"
-									type="email" 
-									id="email" 
-									name="email" 
-									placeholder="Email"
-									required
-								>
+									<input
+										class="touch__input"
+										type="email"
+										id="email"
+										name="email"
+										placeholder="Email"
+										required
+									/>
 								</div>
 							</fieldset>
 							<label class="touch__label" for="question">Your question</label>
-							<textarea 
+							<textarea
 								class="touch__textarea"
-								name="question" 
+								name="question"
 								id="question"
 								placeholder="Question"
 								required
-							></textarea>						
+							></textarea>
+
 							<label class="touch__label touch__check-block" for="checkbox">
-								<input 
-								class="touch__checkbox"
-								type="checkbox" 
-								id="checkbox"
-								required > <!-- ---required нужен для того что бы в форме ты не мог отправить пока не заполнишь все нужные поля  -->
-								I agree with the <a href="#">terms</a>
-							</label>
+								<input
+									required
+									class="touch__checkbox"
+									type="checkbox"
+									id="checkbox"
+								/>
+								I agree with the <a href="#">terms</a></label
+							>
+
 							<button class="btn-send touch__btn">send request</button>
 						</form>
 					</div>
 				</div>
-				<img src="/src/img/form/vase.png" alt="vase" class="touch__decor">
+				<img src="/src/img/form/vase.png" alt="vase" class="touch__decor" />
 			</div>
 		</section>
 
 		<section class="works">
 			<div class="container">
 				<h2 class="title-h2">check out our works</h2>
+
 				<div class="works__wrapper">
-						<!-- Slider main container -->
 					<div class="swiper works__slider">
-					<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
-							<!-- Slides -->
 							<div class="swiper-slide">
-								<img src="/src/img/works/tea-1.jpg" alt="tea-1">
+								<img src="/src/img/works/tea-1.jpg" alt="tea-1" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/src/img/works/tea-2.jpg" alt="tea-2">
+								<img src="/src/img/works/tea-2.jpg" alt="tea-2" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/src/img/works/tea-3.jpg" alt="tea-3">
+								<img src="/src/img/works/tea-3.jpg" alt="tea-3" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/src/img/works/tea-2.jpg" alt="tea-2">
+								<img src="/src/img/works/tea-2.jpg" alt="tea-2" />
 							</div>
-							<!-- ... -->
 						</div>
 					</div>
-						<!-- If we need pagination -->
 					<div class="swiper-pagination"></div>
 					<button class="icon-left-open works__slider-nav"></button>
 					<button class="icon-right-open works__slider-nav"></button>
 				</div>
-					
 			</div>
 		</section>
-		
-		<footer class="footer">
+
+		<footer class="footer footer_spaced">
 			<div class="container">
-				<div class="pure-g">
-					<div class="pure-u-1 ">
+				<div class="footer__wrapper">
+					<div class="footer__newsletter">
+						<h2 class="footer__header">newsletter</h2>
+						<div class="footer__text footer__text_spaced">
+							Keep up to date with news and promotions
+						</div>
 						<form action="#" class="footer__form">
-							<h3 class="footer__news">newsletter</h3>
-							<fieldset class="footer__fieldset">
-								<div class="footet__input-block">
-									<label class="footer__label" for="Keep up to date with news and promotions">Keep up to date with news and promotions</label>
-									<input 
-										class="footer__input"
-										type="text" 
-										id="Enter your e-mail" 
-										name="Enter your e-mail" 
-										placeholder="Enter your e-mail"
-										required
-									> 
-								</div>
-								<label class="footer__label footer__check-block" for="checkbox">
-								<input 
-								class="footer__checkbox"
-								type="checkbox" 
-								id="checkbox"
-								required >
-								I agree with the <a href="#">terms</a>
-								</label>
-								<button class="btn-submit footer__btn">submit</button>
-							</fieldset>
+							<input
+								placeholder="Enter your e-mail"
+								type="email"
+								class="footer__input"
+								required
+							/>
+							<label class="footer__check-block" for="footer__checkbox">
+								<input
+									required
+									class="footer__checkbox"
+									type="checkbox"
+									id="footer__checkbox"
+								/>
+								I agree with the <a href="#">terms</a></label
+							>
+							<button class="btn-submit footer__form-btn">submit</button>
 						</form>
 					</div>
-					<div class="pure-u-1 ">
-						<div class="pure-u-md-1-3">
-							<div class="footer__diskover">
-							<h3>discover</h3>
-							<ul>
-								<li><a href="#">About Us</a>
-								</li>
-								<li>
-								<a href="#">Blog</a>
-							</li>
-							</ul>
+					<div class="footer__links">
+						<div class="footer__links-block">
+							<h2 class="footer__header">discover</h2>
+							<nav class="footer__nav">
+								<ul>
+									<li class="footer__link"><a href="#">About Us</a></li>
+									<li class="footer__link"><a href="#">Blog</a></li>
+								</ul>
+							</nav>
 						</div>
-						<div class=" footer__shopping">
-							<h3>shopping</h3>
-							<ul>
-								<li><a href="#">Catalog</a>
-								</li>
-							</ul>
+						<div class="footer__links-block">
+							<h2 class="footer__header">shopping</h2>
+							<nav class="footer__nav">
+								<ul>
+									<li class="footer__link"><a href="#">Catalog</a></li>
+								</ul>
+							</nav>
 						</div>
-						<div class=" footer__info">
-							<h3>information</h3>
-							<a href="#">Terms and Conditions</a>
-						</div>
+						<div class="footer__links-block">
+							<h2 class="footer__header">information</h2>
+							<nav class="footer__nav">
+								<ul>
+									<li class="footer__link">
+										<a href="#">Terms and Conditions</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
 					</div>
-					<div class="pure-u-1"></div>
+					<div class="footer__social">
+						<h2 class="footer__header">follow us</h2>
+						<ul class="footer__social-block">
+							<li>
+								<a href="https://www.facebook.com/">
+									<span class="icon-facebook"></span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/">
+									<span class="icon-instagram"></span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.pinterest.com/">
+									<span class="icon-pinterest-circled"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+				<div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
 			</div>
 		</footer>
 

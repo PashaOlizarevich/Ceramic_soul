@@ -1,25 +1,25 @@
 @use "/src/sass/base/variables.scss" as *;
 
 @mixin title {
-    color: $dark;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: none;
-    text-align: center;
+	color: $dark;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 @mixin button {
-    display: block;
-    padding: 0 10px;  /* ---сделал для того что бы если поменяется текс , то он не прилипнет к краям кнопки */
-    border-radius: 2px;
-    background-color: transparent;  /* - сделал кнопку прозрачной */
-    border: 1px solid $dark;
-    text-align: center;
-    color: $dark;
-    font-style: normal;
-    font-weight: 400px;
-    line-height: none;
-    text-transform: uppercase;
-    cursor: pointer;  /* --- внешний вид курсора при наведение на кнопку */
+	display: block;
+	padding: 0 10px;
+	background-color: transparent;
+	border-radius: 2px;
+	border: 1px solid $dark;
+	text-align: center;
+	color: $dark;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	cursor: pointer;
 }
