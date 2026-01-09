@@ -1,4 +1,5 @@
 @use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
 
 .blog {
     margin-top: 50px;
@@ -9,7 +10,12 @@
         text-align: left;
     }
     &__wrapper {
+        position: relative;
         margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        
     }
     &__card {
         border: 1px solid $dark;
@@ -26,11 +32,71 @@
     }
     &__text {
         margin-top: 25px;
-        padding: 0 25px 0 25px;
+        padding: 0 25px 25px 25px;
         color: $dark;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
+    &__img {
+        max-inline-size: none;  /* --- убрал базавые настройки  */
+        width: calc(100% + 2px);  /* --- калькулятор так можно увеличить немного изоображение для того что бы оно перекрыло наш бордер и было ощющение что полоска доходит до картинки и дальше только картинка на белом фоне  */
+        transform: translateX(-1px) translateY(-1px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+        &__wrapper {
+            padding: 25px 25px 0 25px;
+            position: relative;
+            @include angle-decoration; 
+        }
+        &__text {
+            margin-top: 15px;
+        }
+        &__data {
+            &-colum {
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: 1200px) {
+    .blog {
+        &__wrapper {
+            gap: 50px;
+            align-items: flex-start;
+        }
+        &__card {
+            width: 520px;
+            min-height: 375px;
+        }
+        &__img {
+            height: 240px;
+            object-fit: cover;
+        }
+    } 
+}
+
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        &__wrapper {
+            align-items: stretch;
+        }
+        &__title {
+            margin-top: 100px;
+        }
+        &__card {
+            width: 670px;
+        }
+        &__img {
+            height: 240px;
+            object-fit: cover;
+        }
+    } 
 }
