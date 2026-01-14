@@ -60,8 +60,13 @@
 		&__title {
 			padding-left: 571px;
 		}
+		&__cta {
+			animation: slideIn 3s;
+		}
 	}
 }
+
+
 
 @media screen and (min-width: 1920px) {
 	.promo {

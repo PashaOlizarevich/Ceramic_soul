@@ -1,6 +1,12 @@
 @use "/src/sass/base/variables.scss" as *;
 
+
+
 .touch {
+	.just-validate-error-field {
+		border: none;
+		outline: 1px solid $ui-error;
+	}
 	padding-top: 60px;
 	&__wrapper {
 		margin-top: 60px;
@@ -115,7 +121,11 @@
 		&__form {
 			padding-left: 20px;
 		}
+		&__decor {
+		animation: slideIn 5s;
 	}
+	}
+	
 }
 
 @media screen and (min-width: 1920px) {
